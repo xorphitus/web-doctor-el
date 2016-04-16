@@ -17,12 +17,10 @@
 (defun doctor-handler (httpcon)
   (elnode-http-start httpcon
                      200
-                     ;; 何がいいんでしょうねぇ…
                      '("Content-type" . "text/x-s-expression"))
   (elnode-http-return httpcon
                       (talk-to-doctor
-                       ;; TODO GETパラメータを使う
-                       (read "(foo)"))))
+                       (read (elnode-http-param httpcon "q")))))
 
 (elnode-start
  'doctor-handler
