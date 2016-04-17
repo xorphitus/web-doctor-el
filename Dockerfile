@@ -1,0 +1,1 @@
+FROM gongo/heroku-emacs

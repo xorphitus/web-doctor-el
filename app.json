@@ -1,0 +1,5 @@
+{
+  "name": "web-doctor-el",
+  "image": "gongo/heroku-emacs",
+  "addons": []
+}
